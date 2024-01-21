@@ -2,9 +2,9 @@
 
 [![Build and Push Docker Image](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-artifact.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-artifact.yml)
 
-[![Build and Publish Python Package](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-publish.yml)
-
 [![Docker Compose Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml)
+
+[![Build and Publish Python Package](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-publish.yml)
 
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
 
