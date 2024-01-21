@@ -1,3 +1,5 @@
+[![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
+
 Creating an "s3-engine" with Weaviate and LangChain's S3 directory loader using LangChain Expression Language (LCEL) and variables instead of functions and classes involves setting up a series of operations as standalone variables or inline expressions. Here's how you can structure it:
 
 To parse and index MarkdownDocument objects into Weaviate using data retrieved from an S3 loader, and processed through an LLM using LangChain Expression Language (LCEL) functionally, we can set up a series of operations as standalone variables or inline lambda functions. Here's a structured approach:
