@@ -25,4 +25,4 @@ jobs:
         context: ./app  # Path to your Dockerfile
         file: ./app/dockerfile
         push: true
-        tags: cdaprod/minio-weaviate-langchain-lib:latest  # Replace with your Docker Hub repo and tag
+        tags: cdaprod/minio-weaviate-langchain-lib:latest
