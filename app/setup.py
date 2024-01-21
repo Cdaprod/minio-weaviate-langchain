@@ -1,8 +1,13 @@
+import os
+
+# Read version from GH Action environment variable
+version = os.getenv('PACKAGE_VERSION', '0.0.0')
+
 from setuptools import setup, find_packages
 
 setup(
     name='minio-weaviate-langchain',  # Replace with your chosen package name
-    version='0.1.0',  # Increment this with new versions
+    version=version,  # Increment this with new versions
     author='David Cannan',  # Optional: your name or your organization's name
     author_email='cdaprod@cdaprod.dev',  # Optional: your email address
     description='A FastAPI application with Langchain, Weaviate, and MinIO integrations',  # Optional: a short description
