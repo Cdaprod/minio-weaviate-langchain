@@ -12,6 +12,11 @@ Creating an "s3-engine" with Weaviate and LangChain's S3 directory loader using 
 
 To parse and index MarkdownDocument objects into Weaviate using data retrieved from an S3 loader, and processed through an LLM using LangChain Expression Language (LCEL) functionally, we can set up a series of operations as standalone variables or inline lambda functions. Here's a structured approach:
 
+REQUIRED WORKFLOW SECRETS:
+- DOCKERHUB_USERNAME
+- DOCKERHUB_TOKEN
+- PYPI_API_TOKEN
+
 ### Step 1: Import Required Modules
 
 ```python
