@@ -13,7 +13,6 @@ services:
       MINIO_ROOT_USER: minio
       MINIO_ROOT_PASSWORD: minio123
     command: server /data --console-address ":9001"
-    network_mode: "host"
 
   weaviate:
     container_name: weaviate_server
@@ -31,7 +30,6 @@ services:
       BACKUP_S3_USE_SSL: 'false'
     volumes:
       - ./weaviate/data:/var/lib/weaviate
-    network_mode: "host"
     depends_on:
       - minio
 
@@ -44,7 +42,6 @@ services:
     depends_on:
       - weaviate
       - minio
-    network_mode: "host"
 
 volumes:
   minio-data:
