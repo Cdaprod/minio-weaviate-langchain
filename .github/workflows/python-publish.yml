@@ -27,7 +27,7 @@ jobs:
 
     - name: List built packages
       run: |
-      ls app/dist
+        ls app/dist
  
     - name: Publish to PyPi
       if: github.ref == 'refs/heads/main'
