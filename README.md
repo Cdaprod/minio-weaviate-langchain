@@ -4,8 +4,6 @@
 
 [![Docker Compose Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml)
 
-[![Build and Publish Python Package](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-publish.yml)
-
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
 
 Creating an "s3-engine" with Weaviate and LangChain's S3 directory loader using LangChain Expression Language (LCEL) and variables instead of functions and classes involves setting up a series of operations as standalone variables or inline expressions. Here's how you can structure it:
