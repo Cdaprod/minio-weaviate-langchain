@@ -24,7 +24,6 @@ class DocumentProcessingRunnable(Runnable):
 
     def run(self, _):
         documents = self.minio_ops()
-
         for doc in documents:
             processed_doc = self.process_document(doc)
             doc_name = self.extract_document_name(processed_doc)
@@ -45,7 +44,7 @@ add_routes(app, runnable, path="/process_documents")
 @app.get("/")
 async def root():
     return {"message": "LangChain-Weaviate-MinIO Integration Service"}
-    
+
 @app.post("/index_from_minio")
 async def index_from_minio():
     runnable.run(None)
@@ -64,3 +63,7 @@ async def update_document(uuid: str, update_properties: dict):
 async def delete_document(uuid: str):
     runnable.weaviate_ops.delete_document(uuid)
     return {"status": "Document deleted"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
