@@ -3,7 +3,7 @@ name: Weaviate Deployment and Data Ingestion
 on:
   push:
     branches:
-      - main
+      - test-volume-changes
 
 jobs:
   deploy-and-ingest:
