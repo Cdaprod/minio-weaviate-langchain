@@ -8,5 +8,5 @@ RUN pip3 install weaviate-client
 # Copy the script into the container
 COPY script.py /weaviate/script.py
 
-# Set the entrypoint to run the script after Weaviate starts
-ENTRYPOINT ["weaviate start &", "python3 /weaviate/script.py"]
+# Custom entrypoint to run the script
+ENTRYPOINT ["sh", "-c", "weaviate start & python3 /weaviate/script.py"]
