@@ -3,8 +3,7 @@ version: '3.8'
 services:
   minio:
     container_name: minio_server
-    build:
-      context: ./minio
+    image: minio/minio
     volumes:
       - ./minio/data:/data
     ports:
@@ -17,8 +16,7 @@ services:
 
   weaviate:
     container_name: weaviate_server
-    build:
-      context: ./weaviate
+    image: semitechnologies/weaviate:latest
     ports:
       - "8080:8080"
     environment:
