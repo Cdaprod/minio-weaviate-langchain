@@ -1,0 +1,67 @@
+name: Backup Test Workflow
+
+on:
+  push:
+    branches:
+      - test-volume-changes  # or any specific branch you want to trigger on
+
+jobs:
+  backup-test:
+    runs-on: ubuntu-latest
+
+    services:
+      minio:
+        build:
+          context: ./minio
+        ports:
+          - 9000:9000
+        env:
+          MINIO_ROOT_USER: minio
+          MINIO_ROOT_PASSWORD: minio123
+        options: >-
+          --health-cmd "curl -f http://localhost:9000/minio/health/live"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+      weaviate:
+        build:
+          context: ./weaviate
+        ports:
+          - 8080:8080
+        env:
+          AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+          PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+          ENABLE_MODULES: 's3_backup'
+          BACKUP_S3_BUCKET: 'weaviate-backups'
+          BACKUP_S3_ENDPOINT: 'http://minio:9000'
+          BACKUP_S3_ACCESS_KEY_ID: 'minio'
+          BACKUP_S3_SECRET_ACCESS_KEY: 'minio123'
+          BACKUP_S3_USE_SSL: 'false'
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Start Services
+      run: docker-compose up -d
+
+    - name: Run Backup Test
+      run: |
+        # Add commands to initiate backup in Weaviate and wait for completion
+
+    - name: Check MinIO Bucket for Backup
+      run: |
+        docker exec minio_server /bin/sh -c "mc alias set myminio http://localhost:9000 minio minio123 && mc ls myminio/weaviate-backups" 
+        
+    - name: Fetch and Save Logs
+      run: |
+        docker logs minio_server > minio.log
+        docker logs weaviate_server > weaviate.log
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'David Cannan'
+        git config --global user.email 'cdaprod@cdaprod.dev'
+        git add .
+        git commit -m "Add new files and logs via Github Workflow"
+        git push
