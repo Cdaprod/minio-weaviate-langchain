@@ -2,7 +2,7 @@ import weaviate
 import json
 
 # Initialize Weaviate client
-client = weaviate.Client("http://localhost:8080")
+client = weaviate.Client("http://weaviate_server:8080")
 
 # Load and create schema
 with open('schema.json', 'r') as file:
