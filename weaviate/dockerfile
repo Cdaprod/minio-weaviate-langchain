@@ -1,6 +1,6 @@
 # Stage 1: Install Python and Weaviate client in a temporary image
 FROM python:3.8-slim as python-base
-RUN pip install weaviate-client
+RUN pip install --upgrade weaviate-client
 
 # Stage 2: Use the official Weaviate image
 FROM semitechnologies/weaviate:latest
