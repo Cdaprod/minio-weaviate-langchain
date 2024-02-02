@@ -9,3 +9,5 @@ weaviate-client
 
 ### Web search API ###
 tavily-python
+
+pytest
