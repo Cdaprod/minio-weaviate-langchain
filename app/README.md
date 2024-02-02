@@ -1,3 +1,58 @@
+# MinIO-Weaviate-LangChain Integration
+
+A FastAPI application demonstrating a text processing pipeline using Weaviate, MinIO, and LangChain with Docker Compose.
+
+## Features
+
+- MinIO bucket document processing.
+- OpenAI LangChain for text analysis.
+- Document indexing in Weaviate.
+- Docker Compose for easy deployment.
+
+## Prerequisites
+
+- Docker and Docker Compose.
+
+## Quick Start
+
+1. **Clone and Navigate**:
+```bash
+git clone https://github.com/Cdaprod/minio-weaviate-langchain
+cd minio-weaviate-langchain
+```
+
+2. **Launch Services**:
+```bash
+docker-compose down && docker-compose up -d
+```
+
+## Usage
+
+- **Endpoints**:
+  - Process and index: `POST /process_documents`
+  - Query documents: `POST /query`
+  - Update: `POST /update/{uuid}`
+  - Delete: `DELETE /delete/{uuid}`
+
+- **Example**: Querying Documents
+  ```python
+  import requests
+  response = requests.post('http://localhost:8000/query', json={"query": "your_query_here"})
+  print(response.json())
+  ```
+
+## Contributing
+
+Contributions are welcome. Please fork the repository and submit pull requests.
+
+## Further Development
+
+Adaptation for Jupyter notebooks and advanced configurations are outlined in the documentation.
+
+---
+
+# GRAVEYARD
+
 This will guide users on how to deploy the application using Docker, which simplifies the setup process by handling dependencies and configurations through Docker containers. Here's an updated version of the `README.md` with Docker Compose deployment instructions:
 
 ### README.md
@@ -171,3 +226,49 @@ Since the FastAPI app is designed to be run as a server, it might not be directl
 ### Note
 
 Adapting a FastAPI application for use as a library in a Jupyter notebook involves a shift in focus. The interactive notebook environment is more suited for demonstrating API calls to the running FastAPI server, rather than running the server itself within the notebook.
+
+# Directory for Autonomous Agent App
+
+For an autonomous agent application powered by LangChain and designed to operate via CI/CD workflows, the directory structure could be tailored to facilitate automated deployment and execution. Here's a modified directory tree strategy:
+
+```
+minio-weaviate-langchain/
+│
+├── .github/workflows/              # CI/CD workflows for agent deployment and operation
+│   ├── agent-deploy.yml            # Workflow for deploying agents
+│   ├── agent-run.yml               # Workflow to trigger agent execution
+│   └── testing.yml                 # Workflow for testing and validation
+│
+├── minio/                          # MinIO Docker and configuration
+│   └── Dockerfile
+│
+├── weaviate/                       # Weaviate Docker and configuration
+│   └── Dockerfile
+│
+├── app/                            # LangChain application
+│   ├── Dockerfile                  # Dockerfile for LangChain environment
+│   ├── agents/                     # Autonomous agents
+│   │   ├── agent_1.py              # Agent 1 script
+│   │   └── agent_2.py              # Agent 2 script
+│   ├── langchain_utils/            # LangChain utilities and tools
+│   │   ├── conversation.py
+│   │   ├── minio_tool.py
+│   │   └── weaviate_tool.py
+│   ├── data/                       # Data used by agents
+│   │   └── agent_data.json
+│   ├── tests/                      # Tests for agents and utilities
+│   │   └── test_agents.py
+│   └── run_agents.py               # Script to execute agents
+│
+├── docker-compose.yaml             # Docker Compose for service orchestration
+└── README.md                       # Project documentation
+```
+
+In this structure:
+- **.github/workflows/**: Contains CI/CD workflows specifically for deploying and running autonomous agents.
+- **app/agents/**: Dedicated directory for individual autonomous agent scripts.
+- **app/data/**: Stores data and configurations specific to each agent's operations.
+- **app/run_agents.py**: Central script to initiate the execution of agents, which can be triggered via CI/CD pipelines.
+- **tests/**: Expanded to include tests for individual agents and their functionalities.
+
+This revised structure supports the autonomous nature of the agents and their operation via CI/CD workflows, enhancing automation and orchestration of the application.
