@@ -1,3 +1,6 @@
+# %%capture --no-stderr
+# %pip install -U langgraph langchain langchain_openai langchain_experimental
+
 from fastapi import FastAPI
 from langchain.llms import OpenAI
 from langchain.runnables import Runnable
