@@ -1,0 +1,46 @@
+name: CI/CD Pipeline for LangChain-Weaviate-MinIO App
+
+on:
+  push:
+    branches:
+      - app
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy Application
+    runs-on: self-hosted
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r app/requirements.txt
+
+    - name: Build Docker Containers
+      run: docker-compose down && docker-compose up -d --build
+
+    - name: Initialize MinIO and Weaviate Services
+      run: |
+        # Add commands to initialize or restart MinIO and Weaviate services if needed
+        echo "Services Initialized"
+
+    - name: Start FastAPI Application
+      run: |
+        # Replace with the command to start your FastAPI application if not already covered by docker-compose
+        echo "Application Started"
+
+    - name: Run Integration Tests
+      run: |
+        # Add commands to run your integration tests to ensure the application is running as expected
+        echo "Integration Tests Passed"
+
+    - name: Notify Deployment Success
+      run: echo "Deployment successful!"

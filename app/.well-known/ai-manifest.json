@@ -1,0 +1,15 @@
+{
+  "name": "LangChain-Weaviate-MinIO Integration Service",
+  "version": "1.0.0",
+  "description": "This plugin integrates LangChain with MinIO and Weaviate to process, index, and query documents.",
+  "author": "CDAPROD",
+  "contact": {
+    "email": "cdaprod@cdaprod.dev"
+  },
+  "logo": "https://cdaprod.dev/logo.png",
+  "url": "https://cdaprod.dev",
+  "openapi_spec_url": "https://cdaprod.dev/openapi.yaml",
+  "auth": {
+    "type": "none"
+  }
+}

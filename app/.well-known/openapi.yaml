@@ -1,0 +1,122 @@
+openapi: 3.0.0
+info:
+  title: LangChain-Weaviate-MinIO Integration Service
+  description: API for managing document processing and indexing using LangChain with MinIO and Weaviate.
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8000'
+    description: Development server
+paths:
+  /:
+    get:
+      summary: Root Endpoint
+      description: Returns a welcome message from the LangChain-Weaviate-MinIO Integration Service.
+      responses:
+        200:
+          description: Successfully retrieved message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: LangChain-Weaviate-MinIO Integration Service
+  /index_from_minio:
+    post:
+      summary: Index Documents from MinIO
+      description: Processes and indexes documents from MinIO into Weaviate.
+      responses:
+        200:
+          description: Indexing operation completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Indexing complete
+  /query:
+    post:
+      summary: Query Weaviate
+      description: Queries documents indexed in Weaviate.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  example: "Find documents related to LangChain"
+      responses:
+        200:
+          description: Successfully queried Weaviate
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    # Define your document schema here
+                    id:
+                      type: string
+                    content:
+                      type: string
+  /update/{uuid}:
+    post:
+      summary: Update Document in Weaviate
+      description: Updates a specific document in Weaviate by UUID.
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+          description: UUID of the document to update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        200:
+          description: Document updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Document updated
+  /delete/{uuid}:
+    delete:
+      summary: Delete Document from Weaviate
+      description: Deletes a specific document from Weaviate by UUID.
+      parameters:
+        - in: path
+          name: uuid
+          required: true
+          schema:
+            type: string
+          description: UUID of the document to delete
+      responses:
+        200:
+          description: Document deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Document deleted
+components:
+  schemas:
+    # Define schemas for your documents and other data models here
