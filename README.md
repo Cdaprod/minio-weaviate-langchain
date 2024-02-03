@@ -18,9 +18,9 @@ The following directory tree is programatically generated to provide an overview
 ├── LICENSE
 ├── README.md
 ├── app
+│   ├── Dockerfile
 │   ├── README.md
 │   ├── __init__.py
-│   ├── dockerfile
 │   ├── main.py
 │   ├── minio_operations.py
 │   ├── requirements.txt
