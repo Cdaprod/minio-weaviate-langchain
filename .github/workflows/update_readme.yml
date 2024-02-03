@@ -30,11 +30,19 @@ jobs:
     - name: Update README.md
       run: python .github/scripts/update_readme.py
 
-    - name: Commit and Push if changed
-      uses: EndBug/add-and-commit@v9
+    - name: Commit changes
+      run: |
+        git config --local user.email "cdaprod@cdaprod.dev"
+        git config --local user.name "Cdaprod"
+        git add README.md
+        if git diff --staged --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "Automated README update: directory tree"
+        fi
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        author_name: Your Name
-        author_email: your-email@example.com
-        message: "Automated README update: directory tree"
-        add: README.md
-        default_author: github_actions
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
