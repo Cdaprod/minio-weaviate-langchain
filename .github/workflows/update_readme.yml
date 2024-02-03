@@ -3,7 +3,7 @@ name: Update README with Directory Tree
 on:
   push:
     branches:
-      - app  # or your default branch
+      - main  # or your default branch
 
 jobs:
   update-readme:
