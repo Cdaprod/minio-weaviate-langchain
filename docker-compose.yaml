@@ -41,7 +41,7 @@ services:
   langchain-fastapi-app:
     container_name: langchain_fastapi
     build:
-      context: ./app/docker
+      context: ./app
     ports:
       - "8000:8000"
     depends_on:
