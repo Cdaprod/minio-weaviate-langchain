@@ -18,7 +18,7 @@
 │   ├── README.md
 │   ├── __init__.py
 │   ├── docker
-│   │   └── dockerfile
+│   │   └── Dockerfile
 │   ├── lib
 │   │   ├── __init__.py
 │   │   ├── agents
