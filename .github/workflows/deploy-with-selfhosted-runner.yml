@@ -27,7 +27,7 @@ jobs:
         run: |
           # Here, you build and push your Docker image to Docker Hub. Replace <image-name> with your image name.
           # Ensure you specify the correct platform for the ARM64 architecture, if necessary.
-          # docker buildx build --platform linux/arm64 -t ${DOCKERHUB_USERNAME}/minio-weaviate-langchain:latest ./app --push
+          docker buildx build --platform linux/arm64 -t ${DOCKERHUB_USERNAME}/minio-weaviate-langchain:latest ./app --push
 
       - name: Deploy with Docker Compose
         run: |
