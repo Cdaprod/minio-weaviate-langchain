@@ -6,6 +6,8 @@
 
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
 
+## Current Directory Tree Structure
+
 ```markdown
 <!-- DIRECTORY_TREE_START -->
 <!-- DIRECTORY_TREE_END -->
