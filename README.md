@@ -10,6 +10,33 @@
 
 ```markdown
 <!-- DIRECTORY_TREE_START -->
+```
+.
+├── DIRECTORY_TREE.txt
+├── LICENSE
+├── README.md
+├── app
+│   ├── README.md
+│   ├── __init__.py
+│   ├── dockerfile
+│   ├── main.py
+│   ├── minio_operations.py
+│   ├── requirements.txt
+│   ├── setup.py
+│   └── weaviate_operations.py
+├── docker-compose.yaml
+├── minio
+│   ├── data
+│   │   └── is_empty
+│   ├── dockerfile
+│   └── entrypoint.sh
+└── weaviate
+    ├── dockerfile
+    └── schema.json
+
+4 directories, 17 files
+
+```
 <!-- DIRECTORY_TREE_END -->
 ```
 
