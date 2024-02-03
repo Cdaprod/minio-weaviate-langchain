@@ -16,10 +16,10 @@ from minio_operations import load_documents_from_minio
 
 # Weaviate and MinIO connection details, ensure these are correctly configured
 WEAVIATE_ENDPOINT = "http://weaviate:8080"
-MINIO_ENDPOINT = "play.min.io:9000"
-MINIO_ACCESS_KEY = "minioadmin"
-MINIO_SECRET_KEY = "minioadmin"
-MINIO_BUCKET = "web-documentation"
+MINIO_ENDPOINT = "minio:9000"
+MINIO_ACCESS_KEY = "minio"
+MINIO_SECRET_KEY = "minio123"
+MINIO_BUCKET = "langchain-bucket"
 
 app = FastAPI()
 
