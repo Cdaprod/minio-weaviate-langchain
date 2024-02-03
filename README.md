@@ -9,7 +9,7 @@
 [![Update README with Directory Tree](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml)
 
 ## Current Directory Tree Structure
-
+The following directory tree is programatically generated to provide an overview of the repos structure (by using `.github/workflows/update_readme.yml` and `.github/scripts/update_readme.py` and is ran on `push` to `main`):
 
 <!-- DIRECTORY_TREE_START -->
 ```
@@ -50,6 +50,7 @@ REQUIRED WORKFLOW SECRETS:
 - DOCKERHUB_USERNAME
 - DOCKERHUB_TOKEN
 - PYPI_API_TOKEN
+- GH_TOKEN
 
 ### Step 1: Import Required Modules
 
