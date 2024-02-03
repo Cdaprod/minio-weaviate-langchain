@@ -6,8 +6,10 @@
 
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
 
-## Current Directory Tree Structure
 [![Update README with Directory Tree](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml)
+
+## Current Directory Tree Structure
+
 
 <!-- DIRECTORY_TREE_START -->
 ```
