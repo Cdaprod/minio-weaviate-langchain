@@ -14,33 +14,29 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
         with:
-          python-version: '3.9'
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Install Python Dependencies
+      - name: Build and Push Docker Images
         run: |
-          python3 -m pip install --upgrade pip
-          pip install -r app/requirements.txt # Ensure all Python packages are ARM64 compatible
+          # Here, you build and push your Docker image to Docker Hub. Replace <image-name> with your image name.
+          # Ensure you specify the correct platform for the ARM64 architecture, if necessary.
+          # docker buildx build --platform linux/arm64 -t ${DOCKERHUB_USERNAME}/minio-weaviate-langchain:latest ./app --push
 
-      - name: Build Docker Containers
-        run: docker-compose down && docker-compose up -d --build # Ensure Docker images are ARM64 compatible
-
-      - name: Initialize MinIO and Weaviate Services
+      - name: Deploy with Docker Compose
         run: |
-          # Verify commands for initializing MinIO and Weaviate are compatible with ARM64 architecture
-          echo "Services Initialized"
+          docker-compose down && docker-compose up -d --build
 
-      - name: Start FastAPI Application
+      - name: Verify Deployment
         run: |
-          # Ensure the FastAPI application is optimized for ARM64
-          echo "Application Started"
-
-      - name: Run Integration Tests
-        run: |
-          # Ensure integration tests can run on ARM64 architecture
-          echo "Integration Tests Passed"
+          # Add commands to verify the deployment, such as curl tests or other health checks.
+          echo "Verify deployment steps here"
 
       - name: Notify Deployment Success
         run: echo "Deployment successful!"
