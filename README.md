@@ -6,6 +6,9 @@
 
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
 
+[![Update README with Directory Tree](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml)
+
+```
 <!-- DIRECTORY_TREE_START -->
 .
 ├── DIRECTORY_TREE.txt
@@ -69,6 +72,7 @@
 13 directories, 44 files
 
 <!-- DIRECTORY_TREE_END -->
+```
 
 Creating an "s3-engine" with Weaviate and LangChain's S3 directory loader using LangChain Expression Language (LCEL) and variables instead of functions and classes involves setting up a series of operations as standalone variables or inline expressions. Here's how you can structure it:
 
