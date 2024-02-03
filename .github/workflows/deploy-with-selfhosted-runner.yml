@@ -36,7 +36,7 @@ jobs:
       - name: Verify Deployment
         run: |
           # Add commands to verify the deployment, such as curl tests or other health checks.
-          echo "Verify deployment steps here!"
+          echo "Verify deployment steps here"
 
       - name: Notify Deployment Success
         run: echo "Deployment successful!"
