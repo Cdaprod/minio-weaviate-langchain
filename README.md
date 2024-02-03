@@ -6,8 +6,73 @@
 
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
 
+[![Update README with Directory Tree](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/update_readme.yml)
+
+```
 <!-- DIRECTORY_TREE_START -->
+.
+├── DIRECTORY_TREE.txt
+├── LICENSE
+├── README.md
+├── app
+│   ├── README.md
+│   ├── __init__.py
+│   ├── docker
+│   │   └── dockerfile
+│   ├── lib
+│   │   ├── __init__.py
+│   │   ├── agents
+│   │   │   ├── AGENTS.md
+│   │   │   ├── agents.py
+│   │   │   ├── create_agent.py
+│   │   │   └── data_agent.py
+│   │   ├── config
+│   │   │   ├── app_config.py
+│   │   │   ├── langchain_config.py
+│   │   │   ├── llm_config.py
+│   │   │   └── tool_config.py
+│   │   ├── langchain_utils
+│   │   │   ├── MinioTool.py
+│   │   │   └── WeaviateTool.py
+│   │   ├── minio_operations.py
+│   │   └── tools
+│   │       ├── ResearchTool.py
+│   │       ├── WritingTool.py
+│   │       ├── tagging
+│   │       │   └── tagging_with_llm.md
+│   │       └── weaviate_operations.py
+│   ├── main-2.py
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── setup.py
+│   └── tests
+│       ├── integration.py
+│       └── unit.py
+├── docker-compose-2.yaml
+├── docker-compose.yaml
+├── minio
+│   ├── data
+│   │   └── is_empty
+│   ├── dockerfile
+│   └── entrypoint.sh
+├── scripts
+│   ├── WorkingWithNotionData-NotionArticleAuthorSchema-Copy1.ipynb
+│   ├── hierarchical-diagram.png
+│   ├── hierarchical_agent_teams.ipynb
+│   ├── multi-agent-collaboration.ipynb
+│   └── s3_backup_module.ipynb
+└── weaviate
+    ├── data.json
+    ├── dockerfile
+    ├── dockerfile-2
+    ├── entrypoint.sh
+    ├── schema.json
+    └── script.py
+
+13 directories, 44 files
+
 <!-- DIRECTORY_TREE_END -->
+```
 
 Creating an "s3-engine" with Weaviate and LangChain's S3 directory loader using LangChain Expression Language (LCEL) and variables instead of functions and classes involves setting up a series of operations as standalone variables or inline expressions. Here's how you can structure it:
 
