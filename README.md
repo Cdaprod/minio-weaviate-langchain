@@ -27,6 +27,8 @@ The following directory tree is programatically generated to provide an overview
 │   ├── setup.py
 │   └── weaviate_operations.py
 ├── docker-compose.yaml
+├── library
+│   └── hierarchical_agent_teams.ipynb
 ├── minio
 │   ├── data
 │   │   └── is_empty
@@ -36,7 +38,7 @@ The following directory tree is programatically generated to provide an overview
     ├── dockerfile
     └── schema.json
 
-4 directories, 17 files
+5 directories, 18 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
