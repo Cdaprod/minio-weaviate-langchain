@@ -34,7 +34,7 @@ services:
       - minio
 
   langchain-fastapi-app:
-    container_name: langchain_fastapi
+    container_name: langchain_app
     build:
       context: ./app
     ports:
