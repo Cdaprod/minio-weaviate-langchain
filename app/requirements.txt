@@ -2,6 +2,8 @@
 fastapi
 uvicorn
 langchain
+langserve
+langgraph
 
 ### Integrated-Services ###
 minio
