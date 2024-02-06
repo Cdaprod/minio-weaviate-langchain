@@ -52,9 +52,9 @@
 ├── docker-compose-2.yaml
 ├── docker-compose.yaml
 ├── minio
+│   ├── Dockerfile
 │   ├── data
 │   │   └── is_empty
-│   ├── dockerfile
 │   └── entrypoint.sh
 ├── scripts
 │   ├── WorkingWithNotionData-NotionArticleAuthorSchema-Copy1.ipynb
@@ -64,8 +64,8 @@
 │   ├── s3_backup_module.ipynb
 │   └── sharedmemory_for_tools.ipynb
 └── weaviate
+    ├── Dockerfile
     ├── data.json
-    ├── dockerfile
     ├── dockerfile-2
     ├── entrypoint.sh
     ├── schema.json
