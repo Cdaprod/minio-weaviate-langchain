@@ -1,4 +1,4 @@
-name: Python App Docker Build
+name: Python App Requiements Build
 
 on: [push, pull_request]
 
