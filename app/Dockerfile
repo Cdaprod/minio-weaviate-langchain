@@ -1,9 +1,11 @@
 FROM python:3.9-slim
 
-COPY app/ /app/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY . /app/
 
-COPY app/ /app/
+
+COPY . /app/
+WORKDIR /app
+RUN pip install --no-cache-dir -r requirements.txt --verbose
 
 EXPOSE 8000
 
