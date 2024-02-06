@@ -18,8 +18,6 @@
 │   ├── Dockerfile
 │   ├── README.md
 │   ├── __init__.py
-│   ├── docker
-│   │   └── Dockerfile
 │   ├── lib
 │   │   ├── __init__.py
 │   │   ├── agents
@@ -71,7 +69,7 @@
     ├── schema.json
     └── script.py
 
-13 directories, 46 files
+12 directories, 45 files
 
 <!-- DIRECTORY_TREE_END -->
 ```
