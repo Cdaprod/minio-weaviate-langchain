@@ -61,7 +61,8 @@
 │   ├── hierarchical-diagram.png
 │   ├── hierarchical_agent_teams.ipynb
 │   ├── multi-agent-collaboration.ipynb
-│   └── s3_backup_module.ipynb
+│   ├── s3_backup_module.ipynb
+│   └── sharedmemory_for_tools.ipynb
 └── weaviate
     ├── data.json
     ├── dockerfile
@@ -70,7 +71,7 @@
     ├── schema.json
     └── script.py
 
-13 directories, 45 files
+13 directories, 46 files
 
 <!-- DIRECTORY_TREE_END -->
 ```
