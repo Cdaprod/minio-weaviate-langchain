@@ -18,9 +18,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install setuptools wheel
-      working_directory: ./app
 
     - name: Build and install Python app
       run: |
-        pip install -r requirements.txt
-      working_directory: ./app
+        pip install -r ./app/requirements.txt
