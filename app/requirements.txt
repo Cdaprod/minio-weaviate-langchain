@@ -4,7 +4,6 @@ fastapi
 uvicorn
 langchain
 langserve
-langgraph
 langsmith
 
 ### Integrated-Services ###
