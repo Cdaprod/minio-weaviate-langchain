@@ -1,4 +1,4 @@
-name: Python App Test Build
+name: Python App Docker Build
 
 on: [push, pull_request]
 
