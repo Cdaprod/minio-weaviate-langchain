@@ -22,22 +22,27 @@
 │   │   ├── __init__.py
 │   │   ├── agents
 │   │   │   ├── AGENTS.md
+│   │   │   ├── __init__.py
 │   │   │   ├── agents.py
 │   │   │   ├── create_agent.py
 │   │   │   └── data_agent.py
 │   │   ├── config
+│   │   │   ├── __init__.py
 │   │   │   ├── app_config.py
 │   │   │   ├── langchain_config.py
 │   │   │   ├── llm_config.py
 │   │   │   └── tool_config.py
 │   │   ├── langchain_utils
 │   │   │   ├── MinioTool.py
-│   │   │   └── WeaviateTool.py
+│   │   │   ├── WeaviateTool.py
+│   │   │   └── __init__.py
 │   │   ├── minio_operations.py
 │   │   └── tools
 │   │       ├── ResearchTool.py
 │   │       ├── WritingTool.py
+│   │       ├── __init__.py
 │   │       ├── tagging
+│   │       │   ├── __init__.py
 │   │       │   └── tagging_with_llm.md
 │   │       └── weaviate_operations.py
 │   ├── main-2.py
@@ -70,7 +75,7 @@
     ├── schema.json
     └── script.py
 
-12 directories, 46 files
+12 directories, 51 files
 
 <!-- DIRECTORY_TREE_END -->
 ```
