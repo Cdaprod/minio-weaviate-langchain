@@ -23,7 +23,7 @@ from langchain.agents.utils import validate_tools_single_input
 from langchain.chains import LLMChain
 
 # Example for creating an OpenAI functions agent, adjust the import based on actual package structure and naming
-from langchain.agents.openai_tools import create_openai_functions_agent
+from langchain.agents.openai_tools import create_openai_tools_agent
 # Adjust the imports based on your project structure
 from .config import app_config, langchain_config, llm_config, tool_config
 from .langchain_utils.MinioTool import MinioTool
