@@ -1,7 +1,5 @@
 # minio-weaviate-langchain
 
-[![Build and Push Docker Image](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-artifact.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-artifact.yml)
-
 [![Docker Compose Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml)
 
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
@@ -18,8 +16,6 @@
 │   ├── Dockerfile
 │   ├── README.md
 │   ├── __init__.py
-│   ├── docker
-│   │   └── Dockerfile
 │   ├── lib
 │   │   ├── __init__.py
 │   │   ├── agents
@@ -71,7 +67,7 @@
     ├── schema.json
     └── script.py
 
-13 directories, 46 files
+12 directories, 45 files
 
 <!-- DIRECTORY_TREE_END -->
 ```
