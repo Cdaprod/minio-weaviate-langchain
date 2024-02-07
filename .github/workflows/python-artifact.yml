@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # Trigger on push to main branch; adjust as needed
+      - app  # Trigger on push to main branch; adjust as needed
 
 jobs:
   build-and-push:
@@ -23,6 +23,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./app  # Path to your Dockerfile
-        file: ./app/dockerfile
+        file: ./app/Dockerfile
         push: true
-        tags: cdaprod/minio-weaviate-langchain-lib:latest
+        tags: cdaprod/minio-weaviate-langchain:latest
