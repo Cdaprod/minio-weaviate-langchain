@@ -23,13 +23,13 @@ from langchain.agents.utils import validate_tools_single_input
 from langchain.chains import LLMChain
 
 # Example for creating an OpenAI functions agent, adjust the import based on actual package structure and naming
-from langchain.agents import create_openai_functions_agent
+from langchain.agents.openai_tools import create_openai_functions_agent
 # Adjust the imports based on your project structure
-from lib.config import app_config, langchain_config, llm_config, tool_config
-from lib.langchain_utils.MinioTool import MinioTool
-from lib.langchain_utils.WeaviateTool import WeaviateTool
-from weaviate_operations import WeaviateOperations
-from minio_operations import load_documents_from_minio
+from .config import app_config, langchain_config, llm_config, tool_config
+from .langchain_utils.MinioTool import MinioTool
+from .langchain_utils.WeaviateTool import WeaviateTool
+from .weaviate_operations import WeaviateOperations
+from .minio_operations import load_documents_from_minio
 # Weaviate and MinIO connection details, ensure these are correctly configured
 WEAVIATE_ENDPOINT = "http://weaviate:8080"
 MINIO_ENDPOINT = "minio:9000"
