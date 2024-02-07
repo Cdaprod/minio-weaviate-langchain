@@ -5,19 +5,31 @@ from fastapi import FastAPI
 from langchain_openai import ChatOpenAI
 # Assuming LangChain core functionalities are similarly structured
 # For runnables, tools, and creating agents, adjust according to the new package structure
-from langchain_runnables import Runnable
-from langchain_tools import BaseTool
+from langchain_core.runnables import Runnable
+
+
+from langchain_core._api import deprecated
+from langchain_core.callbacks import BaseCallbackManager
+from langchain_core.language_models import BaseLanguageModel
+from langchain_core.prompts import PromptTemplate
+from langchain_core.pydantic_v1 import Field
+from langchain_core.tools import BaseTool
+
+from langchain.agents.agent import Agent, AgentOutputParser
+from langchain.agents.agent_types import AgentType
+from langchain.agents.conversational.output_parser import ConvoOutputParser
+from langchain.agents.conversational.prompt import FORMAT_INSTRUCTIONS, PREFIX, SUFFIX
+from langchain.agents.utils import validate_tools_single_input
+from langchain.chains import LLMChain
+
 # Example for creating an OpenAI functions agent, adjust the import based on actual package structure and naming
-from langchain_agents import create_openai_functions_agent
-
-
+from langchain.agents import create_openai_functions_agent
 # Adjust the imports based on your project structure
 from config import app_config, langchain_config, llm_config, tool_config
-#from langchain_utils.MinioTool import MinioTool
-#from langchain_utils.WeaviateTool import WeaviateTool
+from langchain_utils.MinioTool import MinioTool
+from langchain_utils.WeaviateTool import WeaviateTool
 from weaviate_operations import WeaviateOperations
 from minio_operations import load_documents_from_minio
-
 # Weaviate and MinIO connection details, ensure these are correctly configured
 WEAVIATE_ENDPOINT = "http://weaviate:8080"
 MINIO_ENDPOINT = "minio:9000"
