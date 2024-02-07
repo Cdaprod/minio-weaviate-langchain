@@ -26,6 +26,7 @@ The following directory tree is programatically generated to provide an overview
 │   ├── requirements.txt
 │   ├── setup.py
 │   └── weaviate_operations.py
+├── artifact-docker-compose.yaml
 ├── docker-compose.yaml
 ├── library
 │   ├── hierarchical_agent_teams.ipynb
@@ -39,7 +40,7 @@ The following directory tree is programatically generated to provide an overview
     ├── dockerfile
     └── schema.json
 
-5 directories, 19 files
+5 directories, 20 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
