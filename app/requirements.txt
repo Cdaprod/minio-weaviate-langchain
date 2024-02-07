@@ -2,8 +2,8 @@
 pydantic
 fastapi
 uvicorn
-langchain
-langserve
+langchain[all]
+langserve[all]
 langsmith
 
 ### Integrated-Services ###
