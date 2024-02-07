@@ -3,6 +3,7 @@ fastapi
 uvicorn
 langchain[all]
 langserve[all]
+langchain-openai
 
 ### Integrated-Services ###
 minio
