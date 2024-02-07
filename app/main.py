@@ -2,8 +2,7 @@
 
 import sys
 from fastapi import FastAPI
-from langchain.llms import OpenAI
-from langchain.langchain import LangChain
+from langchain_openai import ChatOpenAI
 from langchain.runnables import Runnable
 from langchain.tools import BaseTool
 from langchain.agents import create_openai_functions_agent
