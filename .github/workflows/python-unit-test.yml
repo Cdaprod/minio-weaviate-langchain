@@ -18,15 +18,17 @@ jobs:
     
     - name: Install dependencies
       run: |
+        cd app
         python -m pip install --upgrade pip
-        pip install -r app/requirements.txt
+        pip install -r requirements.txt
         pip install pytest
+         
 
     - name: Run Unit Tests
-      run: pytest app/tests/unit
+      run: pytest tests/unit
       
     - name: Run Integration Tests
-      run: pytest app/tests/integration
+      run: pytest tests/integration
       
     # Optional: Add a step for end-to-end tests if applicable
     # - name: Run End-to-End Tests
