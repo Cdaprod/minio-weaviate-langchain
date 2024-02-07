@@ -1,8 +1,8 @@
 ### Python-Web-Server ###
 fastapi
 uvicorn
-langchain
-langserve
+langchain[all]
+langserve[all]
 
 ### Integrated-Services ###
 minio
