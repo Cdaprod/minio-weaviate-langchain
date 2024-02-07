@@ -2,6 +2,7 @@
 
 import sys
 from fastapi import FastAPI
+import langserve
 from langchain_openai import ChatOpenAI
 # Assuming LangChain core functionalities are similarly structured
 # For runnables, tools, and creating agents, adjust according to the new package structure
