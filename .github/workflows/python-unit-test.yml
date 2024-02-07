@@ -1,7 +1,8 @@
 name: Python Application Test Workflow
 
 on: [push, pull_request]
-
+  branch:
+    - app
 jobs:
   test:
     runs-on: ubuntu-latest
