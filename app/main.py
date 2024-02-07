@@ -2,7 +2,6 @@
 
 import sys
 from fastapi import FastAPI
-from langchain_openai import ChatOpenAI OpenAI
 from langchain_openai import OpenAI
 # Assuming LangChain core functionalities are similarly structured
 from langchain_core import LangChain
