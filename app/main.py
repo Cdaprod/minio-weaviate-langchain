@@ -2,10 +2,15 @@
 
 import sys
 from fastapi import FastAPI
-from langchain_openai import ChatOpenAI
-from langchain.runnables import Runnable
-from langchain.tools import BaseTool
-from langchain.agents import create_openai_functions_agent
+from langchain_openai import ChatOpenAI OpenAI
+from langchain_openai import OpenAI
+# Assuming LangChain core functionalities are similarly structured
+from langchain_core import LangChain
+# For runnables, tools, and creating agents, adjust according to the new package structure
+from langchain_runnables import Runnable
+from langchain_tools import BaseTool
+# Example for creating an OpenAI functions agent, adjust the import based on actual package structure and naming
+from langchain_agents import create_openai_functions_agent
 # Adjust the imports based on your project structure
 from config import app_config, langchain_config, llm_config, tool_config
 from langchain_utils.MinioTool import MinioTool
