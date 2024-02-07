@@ -3,7 +3,7 @@
 
 from fastapi import FastAPI
 from langchain.llms import OpenAI
-from langchain.runnables import Runnable
+from langchain_core.runnables import Runnable
 from langchain import add_routes
 
 from .weaviate_operations import WeaviateOperations
