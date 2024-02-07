@@ -32,7 +32,8 @@ The following directory tree is programatically generated to provide an overview
 ├── docker-compose.yaml
 ├── library
 │   ├── hierarchical_agent_teams.ipynb
-│   └── multi-agent-collaboration.ipynb
+│   ├── multi-agent-collaboration.ipynb
+│   └── sharedmemory_for_tools.ipynb
 ├── minio
 │   ├── data
 │   │   └── is_empty
@@ -42,7 +43,7 @@ The following directory tree is programatically generated to provide an overview
     ├── dockerfile
     └── schema.json
 
-5 directories, 20 files
+5 directories, 21 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
