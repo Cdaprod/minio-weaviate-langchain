@@ -5,6 +5,7 @@ uvicorn
 langchain[all]
 langserve[all]
 langsmith
+langchain-openai
 
 ### Integrated-Services ###
 minio
