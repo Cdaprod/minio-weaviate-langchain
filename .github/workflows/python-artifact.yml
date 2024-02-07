@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: Build Docker Image
 
 on:
   push:
@@ -6,12 +6,14 @@ on:
       - main  # Trigger on push to main branch; adjust as needed
 
 jobs:
-  build-and-push:
+  docker-build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Check Out Repo
       uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
@@ -19,10 +21,17 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and Push Docker Image
+    - name: Build Docker Image
       uses: docker/build-push-action@v2
       with:
-        context: ./app  # Path to your Dockerfile
-        file: ./app/dockerfile
-        push: true
-        tags: cdaprod/minio-weaviate-langchain-lib:latest
+        context: ./app  # Path to your Dockerfile and build context
+        file: ./app/Dockerfile
+        push: false  # Set to true if you want to push to Docker Hub or any other registry
+        tags: cdaprod/minio-weaviate-langchain:latest  # Customize this for your Docker Hub username/repository:tag
+        load: true  # If pushing is disabled, load the image into Docker
+
+    # Optional: Push the Docker image to a registry
+    - name: Push to Docker Hub
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      run: |
+        docker push cdaprod/minio-weaviate-langchain:lastest

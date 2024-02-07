@@ -1,18 +1,16 @@
-name: Python App Test Build
+name: Python App Requiements Build
 
 on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'  # Set your Python version
+      uses: actions/setup-python@v3
 
     - name: Install dependencies
       run: |
@@ -21,5 +19,4 @@ jobs:
 
     - name: Build and install Python app
       run: |
-        cd app
-        pip install .
+        pip install -r ./app/requirements.txt

@@ -1,7 +1,5 @@
 # minio-weaviate-langchain
 
-[![Build and Push Docker Image](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-artifact.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-artifact.yml)
-
 [![Docker Compose Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/docker-compose-test.yml)
 
 [![Python App Test Build](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/python-app-test.yml)
@@ -18,8 +16,6 @@
 │   ├── Dockerfile
 │   ├── README.md
 │   ├── __init__.py
-│   ├── docker
-│   │   └── Dockerfile
 │   ├── lib
 │   │   ├── __init__.py
 │   │   ├── agents
@@ -50,27 +46,29 @@
 │       ├── integration.py
 │       └── unit.py
 ├── docker-compose-2.yaml
+├── docker-compose-3.yaml
 ├── docker-compose.yaml
 ├── minio
+│   ├── Dockerfile
 │   ├── data
 │   │   └── is_empty
-│   ├── dockerfile
 │   └── entrypoint.sh
 ├── scripts
 │   ├── WorkingWithNotionData-NotionArticleAuthorSchema-Copy1.ipynb
 │   ├── hierarchical-diagram.png
 │   ├── hierarchical_agent_teams.ipynb
 │   ├── multi-agent-collaboration.ipynb
-│   └── s3_backup_module.ipynb
+│   ├── s3_backup_module.ipynb
+│   └── sharedmemory_for_tools.ipynb
 └── weaviate
+    ├── Dockerfile
     ├── data.json
-    ├── dockerfile
     ├── dockerfile-2
     ├── entrypoint.sh
     ├── schema.json
     └── script.py
 
-13 directories, 45 files
+12 directories, 46 files
 
 <!-- DIRECTORY_TREE_END -->
 ```
