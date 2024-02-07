@@ -46,6 +46,7 @@
 │       ├── integration.py
 │       └── unit.py
 ├── docker-compose-2.yaml
+├── docker-compose-3.yaml
 ├── docker-compose.yaml
 ├── minio
 │   ├── Dockerfile
@@ -67,7 +68,7 @@
     ├── schema.json
     └── script.py
 
-12 directories, 45 files
+12 directories, 46 files
 
 <!-- DIRECTORY_TREE_END -->
 ```
