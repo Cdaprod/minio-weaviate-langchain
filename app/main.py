@@ -2,7 +2,7 @@
 
 import sys
 from fastapi import FastAPI
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
 # Assuming LangChain core functionalities are similarly structured
 from langchain_core import LangChain
 # For runnables, tools, and creating agents, adjust according to the new package structure
@@ -28,7 +28,7 @@ app = FastAPI()
 
 class DocumentProcessingRunnable(Runnable):
     def __init__(self, minio_tool, weaviate_tool):
-        self.llm = OpenAI(api_key=llm_config.API_KEY)
+        self.llm = ChatOpenAI(api_key=llm_config.API_KEY)
         self.weaviate_ops = WeaviateOperations(weaviate_tool.config['url'])
         self.bucket_name = MINIO_BUCKET
         self.minio_ops = lambda: load_documents_from_minio(self.bucket_name, minio_tool.config['endpoint'], minio_tool.config['access_key'], minio_tool.config['secret_key'])
