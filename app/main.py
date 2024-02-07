@@ -105,5 +105,4 @@ async def delete_document(uuid: str):
     return {"status": "Document deleted"}
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
