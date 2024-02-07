@@ -1,6 +1,5 @@
 ### Python-Web-Server ###
 fastapi
-uvicorn
 langchain[all]
 langserve[all]
 langchain-openai

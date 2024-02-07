@@ -2,7 +2,6 @@
 
 import sys
 from fastapi import FastAPI
-import uvicorn
 from langchain_openai import ChatOpenAI
 # Assuming LangChain core functionalities are similarly structured
 # For runnables, tools, and creating agents, adjust according to the new package structure
@@ -105,4 +104,5 @@ async def delete_document(uuid: str):
     return {"status": "Document deleted"}
 
 if __name__ == "__main__":
+    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
