@@ -34,6 +34,7 @@ services:
       - minio
 
   langchain-fastapi-app:
+    image: cdaprod/langchain-app
     container_name: langchain_app
     build:
       context: ./app
