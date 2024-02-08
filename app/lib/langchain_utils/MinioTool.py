@@ -6,7 +6,7 @@ class MinioTool(BaseTool):
     name = "minio"
     description = "Interact with MinIO object storage."
 
-    def __init__(self, minio_url, access_key, secret_key, secure=True):
+    def __init__(self, minio_url, access_key, secret_key, secure=False):
         """
         Initialize the MinIO client.
         :param minio_url: URL of the MinIO server.
