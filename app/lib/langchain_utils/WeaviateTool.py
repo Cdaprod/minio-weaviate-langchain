@@ -40,5 +40,5 @@ class WeaviateTool(BaseTool):
         pass
 
 # Example usage
-weaviate_tool = WeaviateTool(weaviate_url="http://localhost:8080", weaviate_api_key="YOUR_API_KEY")
-result = weaviate_tool.run("get", "Article", ["title", "content"], where_filter={"path": "title", "operator": "Equal", "valueString": "Sample Title"})
+#weaviate_tool = WeaviateTool(weaviate_url="http://localhost:8080", weaviate_api_key="YOUR_API_KEY")
+#result = weaviate_tool.run("get", "Article", ["title", "content"], where_filter={"path": "title", "operator": "Equal", "valueString": "Sample Title"})

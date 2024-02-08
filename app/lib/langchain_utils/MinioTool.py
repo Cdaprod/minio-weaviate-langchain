@@ -43,13 +43,13 @@ class MinioTool(BaseTool):
             return {"status": "error", "message": str(e)}
 
 # Example usage
-minio_tool = MinioTool(minio_url="minio.example.com", access_key="YOUR_ACCESS_KEY", secret_key="YOUR_SECRET_KEY", secure=False)
+#minio_tool = MinioTool(minio_url="minio.example.com", access_key="YOUR_ACCESS_KEY", secret_key="YOUR_SECRET_KEY", secure=False)
 # Upload a file
-upload_result = minio_tool.run("upload", "my-bucket", "object-name", file_path="/path/to/file")
+#upload_result = minio_tool.run("upload", "my-bucket", "object-name", file_path="/path/to/file")
 # Download a file
-download_result = minio_tool.run("download", "my-bucket", "object-name", file_path="/path/to/download")
+#download_result = minio_tool.run("download", "my-bucket", "object-name", file_path="/path/to/download")
 # List objects in a bucket
-list_result = minio_tool.run("list", "my-bucket", "object-name")
+#list_result = minio_tool.run("list", "my-bucket", "object-name")
 
 #In this example:
 #- `MinioTool` is derived from `BaseTool`.
