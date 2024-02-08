@@ -67,8 +67,11 @@ def initialize_tools():
     """
     Initialize and return instances of MinioTool and WeaviateTool.
     """
-    minio_tool = MinioTool(tool_config.MINIO_CONFIG)
-    weaviate_tool = WeaviateTool(tool_config.WEAVIATE_CONFIG)
+    minio_tool = MinioTool(minio_url=tool_config.MINIO_ENDPOINT,
+                           access_key=tool_config.MINIO_ACCESS_KEY,
+                           secret_key=tool_config.MINIO_SECRET_KEY,
+                           secure=False)  # Set secure=True if using HTTPS
+    weaviate_tool = WeaviateTool(tool_config.WEAVIATE_ENDPOINT, tool_config.WEAVIATE_API_KEY)
     return minio_tool, weaviate_tool
 
 def setup_document_processing_runnable():
