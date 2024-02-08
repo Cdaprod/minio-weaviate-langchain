@@ -25,6 +25,7 @@ The following directory tree is programatically generated to provide an overview
 │   ├── Dockerfile
 │   ├── README.md
 │   ├── __init__.py
+│   ├── init_weaviate.py
 │   ├── lib
 │   │   ├── __init__.py
 │   │   ├── agents
@@ -71,7 +72,7 @@ The following directory tree is programatically generated to provide an overview
     ├── dockerfile
     └── schema.json
 
-11 directories, 41 files
+11 directories, 42 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
