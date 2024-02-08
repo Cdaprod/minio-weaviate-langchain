@@ -7,20 +7,38 @@ class MinioTool(BaseTool):
     description = "Interact with MinIO object storage."
 
     def __init__(self, minio_url, access_key, secret_key, secure=True):
-        # Initialize the MinIO client
-        self.minio_client = Minio(minio_url, access_key=access_key, secret_key=secret_key, secure=secure)
+        """
+        Initialize the MinIO client.
+        :param minio_url: URL of the MinIO server.
+        :param access_key: Access key for MinIO.
+        :param secret_key: Secret key for MinIO.
+        :param secure: Use secure connection.
+        """
+        try:
+            self.minio_client = Minio(minio_url, access_key=access_key, secret_key=secret_key, secure=secure)
+        except Exception as e:
+            raise ValueError(f"Failed to initialize MinioTool: {e}")
 
-    def run(self, action, bucket_name, object_name, **kwargs):
-        # Define actions such as 'upload', 'download', 'list', etc.
-        if action == 'upload':
-            return self.upload_file(bucket_name, object_name, **kwargs)
-        elif action == 'download':
-            return self.download_file(bucket_name, object_name, **kwargs)
-        elif action == 'list':
-            return self.list_objects(bucket_name)
-        else:
-            return {"error": f"Action '{action}' not supported"}
-
+    def _run(self, action, bucket_name, object_name, **kwargs):
+        """
+        Perform the specified action with MinIO. Supports 'upload', 'download', 'list'.
+        :param action: The action to perform ('upload', 'download', 'list').
+        :param bucket_name: Name of the bucket.
+        :param object_name: Name of the object.
+        :return: Result of the action.
+        """
+        try:
+            if action == 'upload':
+                return self.upload_file(bucket_name, object_name, **kwargs)
+            elif action == 'download':
+                return self.download_file(bucket_name, object_name, **kwargs)
+            elif action == 'list':
+                return self.list_objects(bucket_name)
+            else:
+                return {"error": f"Action '{action}' not supported"}
+        except S3Error as e:
+            return {"status": "error", "message": str(e)}
+            
     def upload_file(self, bucket_name, object_name, file_path):
         try:
             self.minio_client.fput_object(bucket_name, object_name, file_path)
