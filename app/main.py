@@ -74,15 +74,15 @@ def initialize_tools():
     weaviate_tool = WeaviateTool(tool_config.WEAVIATE_ENDPOINT, tool_config.WEAVIATE_API_KEY)
     return minio_tool, weaviate_tool
 
-def setup_document_processing_runnable():
-    """
-    Setup DocumentProcessingRunnable with MinioTool and WeaviateTool.
-    """
-    minio_tool, weaviate_tool = initialize_tools()
-    runnable = DocumentProcessingRunnable(minio_tool, weaviate_tool)
-    return runnable
+# def setup_document_processing_runnable():
+#     """
+#     Setup DocumentProcessingRunnable with MinioTool and WeaviateTool.
+#     """
+#     minio_tool, weaviate_tool = initialize_tools()
+#     runnable = DocumentProcessingRunnable(minio_tool, weaviate_tool)
+#     return runnable
 
-runnable = setup_document_processing_runnable()
+# runnable = setup_document_processing_runnable()
 
 @app.get("/")
 async def root():
