@@ -44,19 +44,18 @@ The following directory tree is programatically generated to provide an overview
 │   │   │   ├── WeaviateTool.py
 │   │   │   └── __init__.py
 │   │   ├── minio_operations.py
-│   │   └── tools
-│   │       ├── ResearchTool.py
-│   │       ├── WritingTool.py
-│   │       ├── __init__.py
-│   │       ├── tagging
-│   │       │   ├── __init__.py
-│   │       │   └── tagging_with_llm.md
-│   │       └── weaviate_operations.py
+│   │   ├── tools
+│   │   │   ├── ResearchTool.py
+│   │   │   ├── WritingTool.py
+│   │   │   ├── __init__.py
+│   │   │   ├── tagging
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── tagging_with_llm.md
+│   │   │   └── weaviate_operations.py
+│   │   └── weaviate_operations.py
 │   ├── main.py
-│   ├── minio_operations.py
 │   ├── requirements.txt
-│   ├── setup.py
-│   └── weaviate_operations.py
+│   └── setup.py
 ├── artifact-docker-compose.yaml
 ├── docker-compose.yaml
 ├── library
@@ -72,7 +71,7 @@ The following directory tree is programatically generated to provide an overview
     ├── dockerfile
     └── schema.json
 
-11 directories, 42 files
+11 directories, 41 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
