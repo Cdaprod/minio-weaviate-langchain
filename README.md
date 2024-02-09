@@ -41,6 +41,7 @@ The following directory tree is programatically generated to provide an overview
 │   │   │   ├── llm_config.py
 │   │   │   └── tool_config.py
 │   │   ├── langchain_utils
+│   │   │   ├── Implement-Prompting.md
 │   │   │   ├── MinioTool.py
 │   │   │   ├── WeaviateTool.py
 │   │   │   └── __init__.py
@@ -72,7 +73,7 @@ The following directory tree is programatically generated to provide an overview
     ├── dockerfile
     └── schema.json
 
-11 directories, 42 files
+11 directories, 43 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
