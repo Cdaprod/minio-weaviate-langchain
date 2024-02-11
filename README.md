@@ -73,9 +73,13 @@ The following directory tree is programatically generated to provide an overview
 └── weaviate
     ├── data.json
     ├── dockerfile
-    └── schema.json
+    ├── library
+    │   └── Getting_Started_With_Weaviate_Python_Client.ipynb
+    └── schemas
+        ├── Article-Author-schema.json
+        └── LangchainMemoryObject-schema.py
 
-11 directories, 45 files
+13 directories, 47 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
