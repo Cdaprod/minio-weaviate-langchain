@@ -62,6 +62,7 @@ The following directory tree is programatically generated to provide an overview
 ├── docker-compose.yaml
 ├── library
 │   ├── hierarchical_agent_teams.ipynb
+│   ├── langgraph_crag.ipynb
 │   ├── multi-agent-collaboration.ipynb
 │   └── sharedmemory_for_tools.ipynb
 ├── minio
@@ -70,10 +71,11 @@ The following directory tree is programatically generated to provide an overview
 │   ├── dockerfile
 │   └── entrypoint.sh
 └── weaviate
+    ├── data.json
     ├── dockerfile
     └── schema.json
 
-11 directories, 43 files
+11 directories, 45 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
