@@ -67,9 +67,9 @@ The following directory tree is programatically generated to provide an overview
 │   ├── multi-agent-collaboration.ipynb
 │   └── sharedmemory_for_tools.ipynb
 ├── minio
+│   ├── Dockerfile
 │   ├── data
 │   │   └── is_empty
-│   ├── dockerfile
 │   └── entrypoint.sh
 └── weaviate
     ├── data.json
