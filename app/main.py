@@ -49,9 +49,6 @@ MINIO_ACCESS_KEY = "minio"
 MINIO_SECRET_KEY = "minio123"
 MINIO_BUCKET = "langchain-bucket"
 
-
-
-
 llama = Ollama(model="llama2")
 
 class MinioEvent(BaseModel):
