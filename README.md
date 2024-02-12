@@ -1,6 +1,6 @@
 # minio-weaviate-langchain
 
-[Repo URl](https://github.com/cdaprod/minio-weaviate-langchain)
+[Repo URL](https://github.com/cdaprod/minio-weaviate-langchain)
 
 [![CI/CD Pipeline for LangChain-Weaviate-MinIO App](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/deploy-with-selfhosted-runner.yml/badge.svg)](https://github.com/Cdaprod/minio-weaviate-langchain/actions/workflows/deploy-with-selfhosted-runner.yml)
 
