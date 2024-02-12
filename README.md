@@ -65,7 +65,8 @@ The following directory tree is programatically generated to provide an overview
 │   ├── hierarchical_agent_teams.ipynb
 │   ├── langgraph_crag.ipynb
 │   ├── multi-agent-collaboration.ipynb
-│   └── sharedmemory_for_tools.ipynb
+│   ├── sharedmemory_for_tools.ipynb
+│   └── web_voyager.ipynb
 ├── minio
 │   ├── Dockerfile
 │   ├── data
@@ -80,7 +81,7 @@ The following directory tree is programatically generated to provide an overview
         ├── Article-Author-schema.json
         └── LangchainMemoryObject-schema.py
 
-13 directories, 47 files
+13 directories, 48 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
