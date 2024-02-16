@@ -63,10 +63,13 @@ The following directory tree is programatically generated to provide an overview
 ├── docker-compose.yaml
 ├── library
 │   ├── chat_agent_executor_with_function_tools.ipynb
+│   ├── custom_agent_with_plugin_retrieval.ipynb
 │   ├── force-calling-a-tool-first.ipynb
 │   ├── hierarchical_agent_teams.ipynb
+│   ├── langchain-agents-multiple-tool-chains-together.ipynb
 │   ├── langgraph_crag.ipynb
 │   ├── multi-agent-collaboration.ipynb
+│   ├── openai_functions_retrieval_qa.ipynb
 │   ├── plan-and-execute.ipynb
 │   ├── sharedmemory_for_tools.ipynb
 │   └── web_voyager.ipynb
@@ -84,7 +87,7 @@ The following directory tree is programatically generated to provide an overview
         ├── Article-Author-schema.json
         └── LangchainMemoryObject-schema.py
 
-13 directories, 51 files
+13 directories, 54 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
