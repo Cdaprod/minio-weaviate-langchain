@@ -62,6 +62,8 @@ The following directory tree is programatically generated to provide an overview
 ├── artifact-docker-compose.yaml
 ├── docker-compose.yaml
 ├── library
+│   ├── chat_agent_executor_with_function_tools.ipynb
+│   ├── force-calling-a-tool-first.ipynb
 │   ├── hierarchical_agent_teams.ipynb
 │   ├── langgraph_crag.ipynb
 │   ├── multi-agent-collaboration.ipynb
@@ -82,7 +84,7 @@ The following directory tree is programatically generated to provide an overview
         ├── Article-Author-schema.json
         └── LangchainMemoryObject-schema.py
 
-13 directories, 49 files
+13 directories, 51 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
