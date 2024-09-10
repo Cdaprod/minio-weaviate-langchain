@@ -68,8 +68,11 @@ The following directory tree is programatically generated to provide an overview
 │   ├── hierarchical_agent_teams.ipynb
 │   ├── langchain-agents-multiple-tool-chains-together.ipynb
 │   ├── langchain-v0-1-0-quickstart-tutorial.ipynb
+│   ├── langgraph_code_assistant.ipynb
 │   ├── langgraph_crag.ipynb
+│   ├── langgraph_crag_mistral.ipynb
 │   ├── multi-agent-collaboration.ipynb
+│   ├── ollama_semantic_layer.ipynb
 │   ├── openai_functions_retrieval_qa.ipynb
 │   ├── plan-and-execute.ipynb
 │   ├── reflection.ipynb
@@ -89,7 +92,7 @@ The following directory tree is programatically generated to provide an overview
         ├── Article-Author-schema.json
         └── LangchainMemoryObject-schema.py
 
-13 directories, 56 files
+13 directories, 59 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
