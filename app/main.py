@@ -2,6 +2,7 @@
 
 import sys
 import json
+from langserve import add_routes
 from pydantic import BaseModel, Field
 from typing import Optional, List
 from fastapi import FastAPI, Request
