@@ -62,6 +62,7 @@ The following directory tree is programatically generated to provide an overview
 ├── artifact-docker-compose.yaml
 ├── docker-compose.yaml
 ├── library
+│   ├── RAPTOR.ipynb
 │   ├── chat_agent_executor_with_function_tools.ipynb
 │   ├── custom_agent_with_plugin_retrieval.ipynb
 │   ├── force-calling-a-tool-first.ipynb
@@ -71,6 +72,7 @@ The following directory tree is programatically generated to provide an overview
 │   ├── langgraph_code_assistant.ipynb
 │   ├── langgraph_crag.ipynb
 │   ├── langgraph_crag_mistral.ipynb
+│   ├── langgraph_rag_agent_llama3_local.ipynb
 │   ├── multi-agent-collaboration.ipynb
 │   ├── ollama_semantic_layer.ipynb
 │   ├── openai_functions_retrieval_qa.ipynb
@@ -92,7 +94,7 @@ The following directory tree is programatically generated to provide an overview
         ├── Article-Author-schema.json
         └── LangchainMemoryObject-schema.py
 
-13 directories, 59 files
+13 directories, 61 files
 
 ```
 <!-- DIRECTORY_TREE_END -->
